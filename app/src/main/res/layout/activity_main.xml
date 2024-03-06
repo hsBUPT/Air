@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+<!-- App Icon -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/first_line"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="250dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/logo"
+            />
+
+        <View
+            android:id="@+id/second_line"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="350dp"
+            android:background="@drawable/logo1" />
+
+    </RelativeLayout>
+<!-- Group infro -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Our group:"
+            android:textSize="25sp"
+            android:textColor="#000"
+            android:layout_marginLeft="20dp">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/people1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HS         YYX"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:layout_marginLeft="60dp">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/people2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LXH       LZL"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:layout_marginLeft="60dp">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/people3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ZYJ       XHQ"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:layout_marginLeft="60dp">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/people4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KQQ      ZJX"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:layout_marginLeft="60dp">
+        </TextView>
+    </RelativeLayout>
+
+    <!--    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    -->
+</LinearLayout>

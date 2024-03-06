@@ -1,0 +1,76 @@
+package com.example.air;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.View;
+import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.TextView;
+
+import androidx.activity.EdgeToEdge;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
+import org.w3c.dom.Text;
+
+public class MainActivity extends AppCompatActivity {
+
+    private static int SPLASH_TIME_OUT = 2000;
+
+    //Hooks
+    View first_line,second_line;
+    TextView group,people1,people2,people3,people4;
+
+    //Animations
+    Animation topAnimation,bottomAnimation,middleAnimation;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_main);
+        topAnimation = AnimationUtils.loadAnimation(this,R.anim.top_animation);
+        bottomAnimation = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
+        middleAnimation = AnimationUtils.loadAnimation(this,R.anim.middie_animation);
+
+        //Hooks
+        first_line = findViewById(R.id.first_line);
+        second_line = findViewById(R.id.second_line);
+
+        group = findViewById(R.id.group);
+        people1 = findViewById(R.id.people1);
+        people2 = findViewById(R.id.people2);
+        people3 = findViewById(R.id.people3);
+        people4 = findViewById(R.id.people4);
+
+        first_line.setAnimation(topAnimation);
+        second_line.setAnimation(middleAnimation);
+
+        group.setAnimation(bottomAnimation);
+        people1.setAnimation(bottomAnimation);
+        people2.setAnimation(bottomAnimation);
+        people3.setAnimation(bottomAnimation);
+        people4.setAnimation(bottomAnimation);
+
+        //Splash Screen
+        new Handler().postDelayed(new Runnable(){
+            @Override
+            public void run(){
+                Intent intent = new Intent(MainActivity.this,secondActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        },SPLASH_TIME_OUT);
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+    }
+}
