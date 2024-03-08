@@ -19,11 +19,15 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static int SPLASH_TIME_OUT = 2000;
+    public void onImageClick(View view){
+        Intent intent = new Intent(this, secondActivity.class);
+        startActivity(intent);
+    }
+    //private static int SPLASH_TIME_OUT = 2000;
 
     //Hooks
-    View first_line,second_line;
-    TextView group,people1,people2,people3,people4;
+    View first_line,goBtn;
+    TextView second_line;
 
     //Animations
     Animation topAnimation,bottomAnimation,middleAnimation;
@@ -42,30 +46,23 @@ public class MainActivity extends AppCompatActivity {
         first_line = findViewById(R.id.first_line);
         second_line = findViewById(R.id.second_line);
 
-        group = findViewById(R.id.group);
-        people1 = findViewById(R.id.people1);
-        people2 = findViewById(R.id.people2);
-        people3 = findViewById(R.id.people3);
-        people4 = findViewById(R.id.people4);
+        goBtn = findViewById(R.id.goBtn);
 
         first_line.setAnimation(topAnimation);
         second_line.setAnimation(middleAnimation);
 
-        group.setAnimation(bottomAnimation);
-        people1.setAnimation(bottomAnimation);
-        people2.setAnimation(bottomAnimation);
-        people3.setAnimation(bottomAnimation);
-        people4.setAnimation(bottomAnimation);
+        goBtn.setAnimation(bottomAnimation);
 
         //Splash Screen
-        new Handler().postDelayed(new Runnable(){
-            @Override
-            public void run(){
-                Intent intent = new Intent(MainActivity.this,secondActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        },SPLASH_TIME_OUT);
+    //    new Handler().postDelayed(new Runnable(){
+    //        @Override
+    //        public void run(){
+    //            Intent intent = new Intent(MainActivity.this,secondActivity.class);
+    //            startActivity(intent);
+    //            finish();
+    //        }
+    //    },SPLASH_TIME_OUT);
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
