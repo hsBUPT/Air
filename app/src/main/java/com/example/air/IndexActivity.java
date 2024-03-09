@@ -3,6 +3,7 @@ package com.example.air;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class IndexActivity extends AppCompatActivity {
+    //private TextView imageView5,imageView6,imageView7,imageView8,imageView9,imageView10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
