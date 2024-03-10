@@ -5,11 +5,11 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SoundActivity">
+    tools:context=".AutoActivity">
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sound" />
+        android:text="Auto" />
 </androidx.constraintlayout.widget.ConstraintLayout>

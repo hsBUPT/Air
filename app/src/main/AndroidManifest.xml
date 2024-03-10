@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Air"
         tools:targetApi="31">
         <activity
+            android:name=".AutoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VideoActivity"
+            android:exported="false" />
+        <activity
             android:name=".TempActivity"
             android:exported="false" />
         <activity
